@@ -61,25 +61,33 @@ Algumas ferramentas que podem facilitar a nossa vida na hora de criar aplicativo
 
 ## O diferencial do HTML5
 **pergunta: Alguem sabe dizer qual é o maior diferencial que o html5 trouxe?**
-Antigamente, quando queriamos desenvolver um software que precissasse de acesso direto ao hardware (Vai usar a camera, vai usar a GPU para Aceleração Grafica, vai fazer um player de audio), não tinha nem o que pensar, tem que ser nativo (Java, C++, C#, Ruby, etc). 
 
-O grande diferencia do HTML5 é exatamente isso, atravéz da sua API a gente começa a ter acesso a funcionalidades de alguns hardwares que antes só podiam estar presentes na web utilizando plugins como flash ou java applets.
+Antigamente, quando queriamos desenvolver um software que precissasse de acesso direto ao hardware (utilizar a camera, a GPU para Aceleração Grafica, ou um player de audio), não tinha nem o que pensar, tinha que ser feito com linguagens como (Java, C++, C#, Ruby, etc). E se quisessemos levar esses aplicativos para a web, só era possivel através de tecnologias como Java Applet, Flash e outros do genero.
+
+O grande diferencia do HTML5 é exatamente isso, ele traz uma serie de APIs novas que a gente começa a ter acesso a funcionalidades de alguns hardwares.
 Hoje com um browser e conhecimento de javascript vc consegue fazer vários experimentos legais utilizando o hardware do seu computador sem precisar de plugins.
 
-Muito lindo na teoria, mas "show me the code".
-mostrar APIs de camera, som, canvas, GPS, etc.
+**show me the code**.
+snippets com APIs de camera, som, canvas, GPS, etc.
 
-Mas a sua ideia não é web, vc quer lançar um applicativo mesmo, quer que as pessoas façam download do seu applicativo na apple store, na play store.
+## Applicativos Híbridos.
+Mas a sua ideia não é web, você quer lançar um applicativo mesmo, você quer criar um aplicativo para os principais players do mercado mobile que hoje em dia são: Android, iPhone e Windows Phone.
 
-Os principais players do mercado mobile hoje em dia são o Android, iPhone e Windows Phone(nem tanto).
+**Então o que você precisa saber?**
+* precisa saber Java para criar o App para Android
+* precisa saber ObjectiveC ou Swift para criar o App para iPhone
+* precisa saber C# para criar o App para Windows Phone.
 
-Android utiliza java como linguagem base, o iPhone utiliza ObjectiveC/Swift e o Windows Phone utiliza C#.
+E depois que você lançar e começar a ganhar dinheiro, provavelmente vai ter que ter um time que domine todas essas linguagens ou um time especialista pra cada plataforma. 
 
-O que torna algumas vezes inviável manter um time especialista em cada plataforma. 
+Na maioria das vezes é inviável manter um time especialista em cada plataforma. 
 
-Que é o nosso caso na Bluesoft e em muitas outras empresas.
-Nossos principais produtos são feitos com Java, Groovy e Ruby. Então, como podemos resolver isso?
+Você precisa gerenciar as versões muito bem.
+Por que vc não pode corrigir bugs apenas em uma das plataformas, tem que corrigir em todas. Não pode lançar a nova funcionalidade só pra uma versão, tem que lançar pra todas. Ou seja, vc está multiplicando seu Trabalho.
 
+Na Bluesoft, nossos principais produtos são feitos com Java, Groovy e Ruby. Então, como podemos resolver isso?
+
+**Criação do PhoneGap e Cordova**
 Imagine se pudessemos criar o app uma vez só e que conseguisse compilar pra todas essas plataformas. E melhor, se pudessmos utilizar uma tecnologia que fosse comum a todos os times.
 
 Foi pensando nisso que o pessoal da Nitobi Software criou o phoneGap. 
