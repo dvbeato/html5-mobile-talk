@@ -1,23 +1,32 @@
-apresentação pessoal
 
-apresentação do tema
+#HTML5 Mobile
 
-pergunta sobre quem ja trabalha na area
-pergunta sobre quem trabalha com desenvolvimento mobile
+Diogo Beato - Engenheiro de Software
 
-Cada vez mais pessoas estão conectadas à internet através dos dispositivos mobile e cada vez é maior a variedade desses dispositivos, smartphones, tablets: Android, iOS, Windows Phone, FirefoxOS e outros
-convencido desse mercado vamos ataca-lo
+Atualmente compondo o time da Bluesoft, atuando em soluções de arquitetura e desenvolvimento do modulo financeiro do BluesoftERP.
 
-primeira decisao, web ou app?
-tudo depende da expectativa do seu usuario.
-Estrategia na decisão: instagram começou com apenas um app iPhone
-Agora imagina vc ter um portal na web e lançar um app soh para iphone? galera vai ficar revolts
-ou um site porno, muito dificil alguem querer instalar um app porno no celular, mais facil acessar pela web o site responsivo e ja era.
+**Perguntas para entender o público**
+* Quem já trabalha na área?
+* Quem trabalha com mobile?
 
-Web first
-Web é mais seguro, todos suportam a web.
-algum tempo atras apostar em apps iphone era certeiro, depois veio o android e tomou boa parte do mercado
-e a galera teve que correr atras, vai saber o que o futuro nos aguarda tbm. Já quem fez pensando na web, esta tranquilo.
+## Pessoas e dispositivos móveis
+Cada vez mais pessoas estão conectadas à internet através dos dispositivos mobile e cada vez é maior a variedade desses dispositivos, smartphones, tablets: Android, iOS, Windows Phone, FirefoxOS e outros.
+
+Convencido desse nicho e querendo levar seu produto para todas essas plataformas você decide ataca-lo
+
+## primeira decisao, web ou app?
+**Tudo depende da expectativa do seu usuario.**
+
+**Estrategia na decisão:** 
+O Instagram começou com apenas um app iPhone, pois era um applicativo novo, não tinha usuários então não tinha expectativas. Agora imagina vc ter um portal na web e lançar um app soh para iphone? Você pode deixar a maioria dos seus usuários frustrados.
+Outro exemplo é um site pornô. É muito dificil alguém querer instalar um applicativo porno no celular, mais facil acessar o website pelo smartphone e não deixar rastros.
+
+## Web first
+Seguir pela Web é mais seguro, todos dispositivos suportam a web.
+Algum tempo atras apostar em apps iphone era certeiro, depois veio o android e tomou boa parte dos usuários
+e a galera teve que correr atras. 
+**Fazer pesquisa de usuários Android x iPhone x Web**
+Quem sempre pensou primeiro na web não teve essas dores de cabeça.
 
 mobile especifico x web responsivo
 pro usuario é irrelevante, é uma decisao mais tecnica.
