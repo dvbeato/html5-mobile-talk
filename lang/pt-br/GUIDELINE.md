@@ -37,8 +37,18 @@ Para o usuario é irrelevante, o que ele quer é ter a devida experiencia no dev
 * Mobile não tem title. 
 * Mobile não tem mouse:hover
 
-Recomendação do google é utilizar design responsivo ao invés de um site especifico. 
-Inclusive recentemente o google alterou seu algoritimo de indexação nas buscas pra aumentar drasticamente a relevancia dos sites que são user friendly a dispositivos mobiles.
+E ninguém quer usar um site no notebook como se fosse um applicativo mobile gigante.
+
+Algumas empresas ainda utilizam site especifico para mobile:
+Facebook por exemplo, quando você acessa a página atravéz de um browser mobile, ele re-direciona para https://m.facebook.com/?_rdr
+O twitter também utiliza um site especifico para mobile, https://mobile.twitter.com/
+
+Porém a recomendação do google é fazer o site responsivo ao invés de um site especifico. 
+
+## Web Responsivo
+Na maioria das vezes que você procurar por site responsivo ou responsive web, os principais topicos abordados vão ser as media queries do CSS e como utiliza-las para adaptar o design do seu site conforme o tamanho da página.
+
+Recentemente o google alterou seu algoritimo de indexação nas buscas pra aumentar drasticamente a relevancia dos sites que são user friendly a dispositivos mobiles.
 
 Então, nos dias de hoje sempre que vc for desenvolver um site ou uma applicação web, comece pelos principios do mobile first.
 
