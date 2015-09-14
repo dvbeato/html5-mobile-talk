@@ -47,17 +47,20 @@ Porém a recomendação do google é fazer o site responsivo ao invés de um sit
 
 ## Web Responsivo
 Na maioria das vezes que você procurar por site responsivo ou responsive web, os principais topicos abordados vão ser as media queries do CSS e como utiliza-las para adaptar o design do seu site conforme o tamanho da página.
+Porém tem várias outras considerações a serem levadas em conta do que somente o tamanho do design. Temos que nos preocupar com a conexão, tamanho das imagens e no fluxo do uso do applicativo tabém, o Menu por exemplo é um componente que sempre sofre alterações na hora de tornar o site responsivo.
 
-Recentemente o google alterou seu algoritimo de indexação nas buscas pra aumentar drasticamente a relevancia dos sites que são user friendly a dispositivos mobiles.
+Recentemente o google alterou seu algorítimo de indexação nas buscas pra aumentar drasticamente a relevancia dos sites que são user friendly a dispositivos mobiles.
 
 Então, nos dias de hoje sempre que vc for desenvolver um site ou uma applicação web, comece pelos principios do mobile first.
 
-Certo, mas o que isso quer dizer, como isso funciona na prática.
-Mostrar ferramentas de desenvolvimento do google chrome, 
-mostrar o livereload e principais frameworks para facilitar no desenvolvimento(bootstrap, foundation, etc)
+Algumas ferramentas que podem facilitar a nossa vida na hora de criar aplicativos responsivos.
+* Chrome Developer.
+* [Bootstrap](http://getbootstrap.com/).
+* [Modernizr](https://modernizr.com/)
+* [Grunt](http://gruntjs.com/)
 
-O diferencial do html5
-pergunta: Alguem sabe dizer qual é o maior diferencial que o html5 trouxe?
+## O diferencial do HTML5
+**pergunta: Alguem sabe dizer qual é o maior diferencial que o html5 trouxe?**
 Antigamente, quando queriamos desenvolver um software que precissasse de acesso direto ao hardware (Vai usar a camera, vai usar a GPU para Aceleração Grafica, vai fazer um player de audio), não tinha nem o que pensar, tem que ser nativo (Java, C++, C#, Ruby, etc). 
 
 O grande diferencia do HTML5 é exatamente isso, atravéz da sua API a gente começa a ter acesso a funcionalidades de alguns hardwares que antes só podiam estar presentes na web utilizando plugins como flash ou java applets.
