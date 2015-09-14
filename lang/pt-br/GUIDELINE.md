@@ -68,6 +68,7 @@ O grande diferencia do HTML5 é exatamente isso, ele traz uma serie de APIs nova
 Hoje com um browser e conhecimento de javascript vc consegue fazer vários experimentos legais utilizando o hardware do seu computador sem precisar de plugins.
 
 **show me the code**.
+
 snippets com APIs de camera, som, canvas, GPS, etc.
 
 ## Applicativos Híbridos.
@@ -87,7 +88,7 @@ Por que vc não pode corrigir bugs apenas em uma das plataformas, tem que corrig
 
 Na Bluesoft, nossos principais produtos são feitos com Java, Groovy e Ruby. Então, como podemos resolver isso?
 
-**Criação do PhoneGap e Cordova**
+## Criação do PhoneGap e Cordova
 
 Imagine se pudessemos criar o app uma vez só e que conseguisse compilar pra todas essas plataformas. E melhor, se pudessmos utilizar uma tecnologia que fosse comum a todos os times.
 
