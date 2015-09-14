@@ -14,7 +14,7 @@ Cada vez mais pessoas estão conectadas à internet através dos dispositivos mo
 
 Convencido desse nicho e querendo levar seu produto para todas essas plataformas você decide ataca-lo
 
-## primeira decisao, web ou app?
+## Web x Applicativo
 **Tudo depende da expectativa do seu usuario.**
 
 **Estrategia na decisão:** 
@@ -25,14 +25,18 @@ Outro exemplo é um site pornô. É muito dificil alguém querer instalar um app
 Seguir pela Web é mais seguro, todos dispositivos suportam a web.
 Algum tempo atras apostar em apps iphone era certeiro, depois veio o android e tomou boa parte dos usuários
 e a galera teve que correr atras. 
+
 **Fazer pesquisa de usuários Android x iPhone x Web**
+
 Quem sempre pensou primeiro na web não teve essas dores de cabeça.
 
-mobile especifico x web responsivo
-pro usuario é irrelevante, é uma decisao mais tecnica.
+## Mobile especifico x Web responsivo
+Para o usuario é irrelevante, o que ele quer é ter a devida experiencia no devido dispositivo.
 
-porém uma coisa importante é ter em mente as diferenças de usabilidade de mobile pra desktop.
-mobile nao tem title. Não tem mouse:hover
+É muito importante ter em mente as diferenças de usabilidade de mobile pra desktop.
+* Mobile não tem title. 
+* Mobile não tem mouse:hover
+
 Recomendação do google é utilizar design responsivo ao invés de um site especifico. 
 Inclusive recentemente o google alterou seu algoritimo de indexação nas buscas pra aumentar drasticamente a relevancia dos sites que são user friendly a dispositivos mobiles.
 
