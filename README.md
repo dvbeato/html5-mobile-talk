@@ -6,8 +6,13 @@ Assets used in my HTML5 Mobile Talk
 
 **Refs**
 * [HTML5 Rocks](http://www.html5rocks.com/)
+* [HTML5 Mobile](http://mobilehtml5.org/)
+* [Can I Use](http://caniuse.com/)
+* [Haz.io](http://haz.io/)
+* [Google Mobile Friendly](https://www.google.com/webmasters/tools/mobile-friendly/)
 
-**Tools and Frameworks**
+
+**Frameworks**
 * [BackboneJS](http://backbonejs.org/)
 * [AngularJS](https://angularjs.org/)
 * [Modernizr](https://modernizr.com/)
