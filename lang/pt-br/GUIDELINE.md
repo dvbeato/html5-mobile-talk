@@ -88,6 +88,7 @@ Por que vc não pode corrigir bugs apenas em uma das plataformas, tem que corrig
 Na Bluesoft, nossos principais produtos são feitos com Java, Groovy e Ruby. Então, como podemos resolver isso?
 
 **Criação do PhoneGap e Cordova**
+
 Imagine se pudessemos criar o app uma vez só e que conseguisse compilar pra todas essas plataformas. E melhor, se pudessmos utilizar uma tecnologia que fosse comum a todos os times.
 
 Foi pensando nisso que o pessoal da Nitobi Software criou o phoneGap. 
