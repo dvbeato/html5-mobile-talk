@@ -99,31 +99,25 @@ Em 2011 a Adobe comprou o código fonte do Nitobi e logo em seguida doou para a 
 Atualmente o código fonte mantido pela apache foudation é o projeto Cordova que é a engine que faz o middleware entre a API do html5 com o código nativo de cada plataforma. 
 O Phone Gap ainda eh mantido pela adobe, mas agora o projeto utiliza o Cordova como core engine e foca no desenvolvimento de novas APIs e Ferramentas que rodem em cima do Cordova.
 
-Caramba, maravilha. Mas como isso funciona?
-Internamente o projeto é um componente de WebView interno do aparelho que renderiza o HTML e o CSS para o usuario e utiliza o java para fazer a lógica e acessar funções de hardware do aparelho.
+**WebView**
+Internamente o projeto é um componente de WebView do aparelho que renderiza a tecnolgias web como HTML, CSS e Javascript. O Cordova tem como objetivo fazer uma camada de middleware entre as APIs de HTML5 que foram sitadas acima e o Hardware nativo do dispositivo.
 
-Apesar do HTML5 prover nativamente algumas funcionalidades para acesso a hardwares como GPS, Camera e acelerometro, nem todos os browsers mobile dao suporte a essas APIs, particularmente versões antigas do android. Então o Cordova inclui essas funções  dentro da webview de cada aparelho.
+Apesar do HTML5 prover nativamente algumas funcionalidades para acesso a hardwares como GPS, Camera e acelerometro, nem todos os browsers mobile dao suporte a essas APIs, particularmente versões antigas do android. Então o Cordova inclui essas e outras funções para manter a compatibilidade entre os aparelhos e enriquecer a API do HTML5.
 
-Compatibilidade entre os browsers.
+## Compatibilidade entre os browsers.
 Pelo fato do Cordova utilizar a webview do aparelho para renderizar a interface, vcs ja devem imaginar que cada vendor utiliza sua engine de browser. 
 Por exemplo: 
-No android a webview utiliza a engine do chrome.
-No iphone a webview utiliza a engine do safari.
-No windows Phone utiliza a engine do IE.
-Então na hora de desenvolver é sempre bom utilizar tecnologias como o modernizr e algum css reset pra garantir que vai estar compativel com todos os browers, o que ja deve ser um problema comum de resolver para uma equipe de desenvolvimento web. 
-Esses são os chamados aplicativos hibridos, pq sao aplicativos web que utilizam tecnologia nativa.
+* No android a webview utiliza a engine do chrome.
+* No iphone a webview utiliza a engine do safari.
+* No windows Phone utiliza a engine do IE.
+Então na hora de desenvolver é sempre bom utilizar tecnologias como o modernizr e algum css reset pra garantir que vai estar compativel com todos os browers, o que ja deve ser um problema comum de resolver para uma equipe de desenvolvimento web.
 
-Nativo x Hibrido
-Outro ponto eh que o Cordova adiciona uma camada extra entre o código do desenvolvedor e código nativo, o que certamente torna as aplicações menos performática do que as aplicações nativas. Então, dependendo do tipo de aplicação que vc quiser fazer, isso pode ser um problema e talvez a melhor opção seja utilizar código nativo mesmo.
+## Nativo x Hibrido
+Uma das maiores discussões na comunidade é quando a performance desses aplicativos Hibridos. Como o Cordova adiciona uma camada extra entre o código do desenvolvedor e código nativo, certamente torna as aplicações menos performática do que as aplicações nativas. Isso não significa que os apps hibridos são lentos e sim que os nativos são mais rápidos, porém são poucos os casos que você vai precisar trocar a performance do nativo pela facilidade de desenvolvimento do hibrido.
 
-impacto de performance entre acesso ao hardware atraves de codigo nativo x api html5, 
-mas nem sempre são relevantes.
-Desktop Nativo e Applicativo Web
-
-Principais ferramentas e frameworks que auxiliam no desenvolvimento de applicativos hibridos
+## Frameworks e Ferramentas
+Principais ferramentas e frameworks que auxiliam no desenvolvimento de applicativos hibridos.
 Ionic, Meteor, Angular, Backbone, jQuery Mobile
 Backend as a service Parse e Firebase
-
-Offiline first
 
 That's all folks
