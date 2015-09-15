@@ -1,0 +1,16 @@
+{
+  "name": "html5-mobile-talk",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dvbeato/html5-mobile-talk",
+  "authors": [
+    "dvbeato <diogo.vecchiati@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

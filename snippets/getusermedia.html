@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
     <meta charset="utf-8">
     <title>HTML5 getUserMedia Demo By Arunkumar Gudelli</title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <style>
     #webcam, #screenshot-canvas
         {
-            margin: 2em auto 0;
-            width: 500px;
+        	margin: 0 auto;
+            width: 320px;
+            height: 240px;
+            display: block;
             background: white;
             border: 1px solid black;
         }
     </style>
 </head>
 <body>
-    
-    <div align="center">
-        <video id="webcam" autoplay ></video>
-        <canvas id="screenshot-canvas"></canvas>
-        <button id="screenshot-button">Capture</button>
+    <div class="row container">
+    	<div class="col-xs-12 col-md-6 text-center">
+    		<video id="webcam" autoplay width="320" height="240"></video>
+    	</div>
+    	<div class="col-xs-12 col-md-6">
+    		<canvas id="screenshot-canvas"></canvas>
+    		<button class="btn btn-primary" id="screenshot-button">Capture</button>		
+    	</div>
+    	
     </div>
-
+    
+    
+        	
     <script>
+    	$(function() {
             var video = document.querySelector('#webcam');
 
             navigator.getUserMedia = (navigator.getUserMedia ||
@@ -35,7 +47,7 @@
                               { video: true },
                               function (localMediaStream) {
                                   video.src = window.URL.createObjectURL(localMediaStream);
-                              }, function (error) { console.log('error:', error) });
+                              }, function (error) { alert('error', error) });
             }
 
             var button = document.querySelector('#screenshot-button');
@@ -49,6 +61,7 @@
                 canvas.height = video.videoHeight;
                 ctx.drawImage(video, 0, 0);
             }
+        });
     </script>
 </body>
 </html>
