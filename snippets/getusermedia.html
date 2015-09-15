@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 getUserMedia Demo By Arunkumar Gudelli</title>
+    <style>
+    #webcam, #screenshot-canvas
+        {
+            margin: 2em auto 0;
+            width: 500px;
+            background: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div align="center">
+        <video id="webcam" autoplay ></video>
+        <canvas id="screenshot-canvas"></canvas>
+        <button id="screenshot-button">Capture</button>
+    </div>
+
+    <script>
+            var video = document.querySelector('#webcam');
+
+            navigator.getUserMedia = (navigator.getUserMedia ||
+                            navigator.webkitGetUserMedia ||
+                            navigator.mozGetUserMedia ||
+                            navigator.msGetUserMedia);
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia
+                            (
+                              { video: true },
+                              function (localMediaStream) {
+                                  video.src = window.URL.createObjectURL(localMediaStream);
+                              }, function (error) { console.log('error:', error) });
+            }
+
+            var button = document.querySelector('#screenshot-button');
+            var canvas = document.querySelector('#screenshot-canvas');
+            var ctx = canvas.getContext('2d');
+
+            button.addEventListener('click',snapshot, false);
+            
+            function snapshot() {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                ctx.drawImage(video, 0, 0);
+            }
+    </script>
+</body>
+</html>

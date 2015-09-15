@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Physic Balls</title>
+	<style>
+		*{
+		    margin:0;
+		    padding:0;
+		}
+		#canvas {
+		    border-bottom: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	
+	<span>click to create balls</span>
+	<canvas id="canvas"></canvas>
+
+
+	<script>
+	var physicBalls = new PhysicBalls();
+	physicBalls.init();
+
+	function PhysicBalls() {
+
+	    var WIDTH = window.innerWidth-5;
+	    var HEIGHT = 450;
+	    var GRAVITY = -5;
+	    
+	    var canvas, context;
+	    
+	    var balls = [];
+	    
+	    
+	    this.init = function() {
+	        window.addEventListener("click", MouseHandler);
+	        canvas = document.getElementById('canvas');
+	        context = canvas.getContext('2d');
+	        
+	        canvas.width=WIDTH;
+	        canvas.height= HEIGHT;
+	        
+	        balls.push({
+	            x:100,
+	            vx:0,
+	            y:100,
+	            vy:0,
+	            radius:10, 
+	            fillStyle:"#D44D4D"
+	        });
+	        
+	        setInterval(animate, 33);
+	    }
+	    
+	    function animate() {
+	        
+	        context.clearRect(0,0, WIDTH, HEIGHT);
+	        
+	        var ball;
+	        
+	        for(index in balls) {
+
+	            ball = balls[index];
+	            
+	            ball.vy += GRAVITY;
+	            ball.y  -= ball.vy;
+	            
+	            if( ball.y >= HEIGHT-ball.radius) {
+	               ball.y = HEIGHT-ball.radius;
+	               ball.vy *= -1;
+	            }
+	            
+	            context.beginPath();
+	            context.fillStyle = ball.fillStyle
+	            context.arc(ball.x, ball.y, ball.radius, 0, 2*Math.PI, false);
+	            context.fill();
+	        }
+	    }
+	    
+	    
+	    function MouseHandler(e) {
+	        balls.push({
+	            x:e.x,
+	            vx:0,
+	            y:e.y,
+	            vy:0,
+	            radius:10, 
+	            fillStyle:"#D44D4D"
+	        });    
+		}
+	}
+</script>
+</body>
+</html>

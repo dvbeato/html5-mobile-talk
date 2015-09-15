@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Physic Balls</title>
+	<style>
+		*{
+		    margin:0;
+		    padding:0;
+		}
+		#canvas {
+		    border-bottom: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	
+	<span>click to create balls</span>
+	<canvas id="canvas"></canvas>
+
+
+<script>
+var physicBalls = new PhysicBalls();
+physicBalls.init();
+
+
+function PhysicBalls() {
+
+    var WIDTH = window.innerWidth-5;
+    var HEIGHT = window.innerHeight-25;
+    var GRAVITY = 3;
+    var canvas
+    var context;
+    
+    var balls = [];
+    
+    var particles = [];
+    
+    this.init = function() {
+        window.addEventListener("click", MouseHandler);
+        
+        canvas = document.getElementById('canvas');
+        context = canvas.getContext('2d');
+        
+        canvas.width=WIDTH;
+        canvas.height= HEIGHT;
+          
+        setInterval(function(){
+            context.clearRect(0,0, WIDTH, HEIGHT);
+            animate();
+            render();
+        }, 1000/60);
+    }
+    
+    
+    function Particle(x,y, size, yVel, xVel) {
+        
+        this.x = x;
+        this.y = y;
+        this.yVel = yVel;
+        this.xVel = xVel;
+        this.active = true;
+        this.color = "rgb(0, 120, 167)";
+        this.size = size;
+        this.animate = function() {
+            this.yVel += GRAVITY;
+            this.y += this.yVel;
+            this.x += this.xVel;
+        };
+        
+        this.draw = function() {
+            context.beginPath();
+            context.fillStyle = this.color;
+            context.arc(this.x, this.y, this.size, 0, 2*Math.PI, false);
+            context.fill();
+        };
+        
+        this.onCollides = function() {
+           this.yVel *= -1;
+            this.y = HEIGHT-this.size;
+        };
+        
+        this.isActive = function() {
+            this.active = this.active && (
+                (this.x <= WIDTH && this.x >= 0) &&
+                (this.y <= HEIGHT && this.y >= 0)
+            ); 
+            return this.active;
+        };
+    }
+       
+    function animate() {
+        for(var index in balls) {
+            balls[index].animate();
+            
+            if(collidesOnGround(balls[index])) {
+                balls[index].onCollides();
+            }
+        }
+        
+        for(var index in particles) {
+            particles[index].animate();
+            
+            if(collidesOnGround(particles[index])) {
+                particles[index].onCollides();
+            }
+        }
+        
+        balls = balls.filter(function(e){ return e.isActive(); });
+        particles = particles.filter(function(e){ return e.isActive(); });
+    }
+    
+    function Ball(x,y, size, yVel) {
+        this.x = x;
+        this.y = y;
+        this.yVel = 0;
+        this.xVel = yVel;
+        this.active = true;
+        this.color = "rgb(0, 120, 167)";
+        this.size = size;
+        this.animate = function() {
+            this.yVel += GRAVITY;
+            this.y += this.yVel;
+        };
+        
+        this.draw = function() {
+            context.beginPath();
+            context.fillStyle = this.color;
+            context.arc(this.x+2, this.y, this.size, 0, 2*Math.PI, false);
+            context.fill();
+        };
+        
+        this.onCollides = function() {
+
+            this.yVel *= -1;
+            this.y = HEIGHT-this.size;
+     
+            for(var i = 0; i < Math.abs(this.yVel); i++) {
+                particles.push(
+                    new Particle(
+                        this.x,
+                        this.y,
+                        (Math.random()*this.size/2), 
+                        (Math.random()*this.yVel), 
+                        ((Math.random()*2)-1)*(Math.abs(this.yVel)/3)
+                    ));
+            }
+            
+            this.active = false;  
+        };
+        
+        this.isActive = function() {
+            this.active = this.active && (
+                (this.x <= WIDTH && this.x >= 0) &&
+                (this.y <= HEIGHT && this.y >= 0)
+            );
+            return this.active;
+        };
+    }
+       
+    function animate() {
+        for(var index in balls) {
+            balls[index].animate();
+            
+            if(collidesOnGround(balls[index])) {
+                balls[index].onCollides();
+            }
+        }
+        
+        for(var index in particles) {
+            particles[index].animate();
+            
+            if(collidesOnGround(particles[index])) {
+                particles[index].onCollides();
+            }
+        }
+        
+        balls = balls.filter(function(e){ return e.isActive(); });
+    }
+    
+    function render() {
+        for(var index in balls) {
+            balls[index].draw();
+        }    
+        
+        for(var index in particles) {
+            particles[index].draw();
+        }
+    }
+    
+    function collidesOnGround(ball) {
+        return (ball.y+ball.size) >= HEIGHT;
+    }
+    
+    function MouseHandler(e) {
+        balls.push(new Ball(e.x, e.y, 10, 0));    
+    }
+}	
+</script>
+</body>
+</html>
